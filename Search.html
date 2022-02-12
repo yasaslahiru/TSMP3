@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/mediaelementplayer.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/fl-bigmug-line.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/myStyles.css">
+
+</head>
+
+<body>
+  <div class="site-wrap">
+
+    <div class="site-navbar mt-4">
+      <div class="container py-1">
+        <div class="row align-items-center">
+          <div class="col-8 col-md-8 col-lg-4">
+            <h1 class="mb-0">
+              <a href="index.html" class="text-white h2 mb-0">
+                <strong>TSMP3<span class="text-primary">.com</span></strong>
+              </a>
+            </h1>
+          </div>
+          <div class="col-4 col-md-4 col-lg-8">
+            <nav class="site-navigation text-right text-md-right" role="navigation">
+              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                  class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="has-children">
+                  <a href="#">Categories</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="artistcategory.html">Artists Category</a></li>
+                    <li><a href="category.html">Songs Category</a></li>
+					<li><a href="lyricspage.html">Lyrics Category</a></li>
+                  </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+				<li><a href="signup.html">SignUp</a></li>
+                <li><a href="about2.html">About Us</a></li>
+				<li><a href="Search.html">Search</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+  <div class="site-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mx-auto text-center">
+          <div class="heading mb-3">Search Mp3</div>
+          <div class="w-75 mx-auto">
+            <!-- <p class="mb-5">Posted on Jun 24, 2020 <span class="mx-3">&bullet;</span> By Admin</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div id="faqCont" class="col-lg-12">
+
+          <figure>
+            <!-- <img src="images/hero_bg_1.jpg" alt="Image" class="img-fluid"> -->
+            <!-- <figcaption>This is an image</figcaption> -->
+          </figure>
+
+          <p>
+            <h2>Song book</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names and songs..." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="athmaliyanage.html">ATHMA LIYANAGE</a></li>
+  <li><a href="iraj.html">IRAJ</a></li>
+  <li><a href="Shashika.html">SHASHIKA NISANSALA</a></li>
+  <li><a href="amaradewa.html">W.D.AMAWADEWA</a></li>
+  <li><a href="B&S.html">B & S</a></li>
+  <li><a href="chamara.html">CHAMARA WEERASINGHA</a></li> 
+  <li><a href="umariya.html">UMARIYA</a></li>
+  <li><a href="Shehan.html">SHEHAN MIHIRANGA</a></li>
+  <li><a href="chithral.html">CHITHRAL SOMAPALA</a></li>
+	<li><a href="classicle.html">Classical songs</a></li>
+	<li><a href="instrumental.html">Instrumental songs</a></li>
+	<li><a href="newsong.html">New Songs</a></li>
+	<li><a href="reggae.html">Reggae songs</a></li>
+	<li><a href="rock.html">Sinhala Rock songs</a></li>
+	<li><a href="acoustic.html">Acoustic songs</a></li>
+	<li><a href="sinhalakarokemp3.html">Sinhala Karoke Songs</a></li>
+	
+
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+            <h2>Sinhala MP3 Songs Search Results</h2>
+            (No search query specified. Please specify a search query to display results.)
+            Search Tips:
+
+
+            <h4>1. Keep your text phrase simple</h4>
+            <h4>3. Use as few words as possible</h4>
+            <h4>2. Choose descriptive words</h4>
+            <h4>4. Check spelling</h4>
+
+            Didn't find what you were looking for? Then, don't worry, it's time to try new Top Sinhala Mp3 Search & find
+            what you want.
+          </p>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+         
+          <p class="mb-5"> Most of the mp3 tracks listed on Top Sinhala Mp3 website are streamed through Adobe Flash Player. 
+							If you're having trouble playing these mp3 
+							tracks on Top Sinhala Mp3, we suggest you install the latest version of the Flash player from adobe.com.
+							It will deliver you best/desired results.</p>
+        </div>
+
+        <div id="followUs" class="col-lg-6">
+          <h3 class="footer-heading mb-4">Follow Us</h3>
+
+          <div class="mb-5">
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-soundcloud"></span></a>
+          </div>
+
+        </div>
+
+        <div class="col-md-12">
+          <h3 class="footer-heading mb-4">Navigations</h3>
+        </div>
+        <div class="col-md-12 col-lg-12 navCont">
+          <ul id="footerNav" class="list-unstyled">
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="dmcapolicy.html">DMCA</a></li>
+            <li><a href="termsofuse.html">Terms of Use</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="frequentlyaskedquestions.html">FAQ</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="contact.html">ContactUs</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12">
+          <p>
+            TSMP3 | Copyright &copy;<script data-cfasync="false"
+              src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
+              document.write(new Date().getFullYear());
+            </script> All rights reserved.
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/mediaelement-and-player.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/circleaudioplayer.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

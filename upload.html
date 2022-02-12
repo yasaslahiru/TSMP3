@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/mediaelementplayer.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/fl-bigmug-line.css">
+
+	<link rel="stylesheet" 
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+		crossorigin="anonymous">
+	<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.css" 
+		integrity="sha512-CmjeEOiBCtxpzzfuT2remy8NP++fmHRxR3LnsdQhVXzA3QqRMaJ3heF9zOB+c1lCWSwZkzSOWfTn1CdqgkW3EQ==" 
+		crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/myStyles.css">
+
+	<style>
+		@font-face {
+		  font-family: 'Exo 2';
+		  font-style: normal;
+		  font-weight: 300;
+		  src: url(https://fonts.gstatic.com/s/exo2/v9/7cH1v4okm5zmbvwkAx_sfcEuiD8j4PKsOdC6.ttf) format('truetype');
+		}
+		@font-face {
+		  font-family: 'Exo 2';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: url(https://fonts.gstatic.com/s/exo2/v9/7cH1v4okm5zmbvwkAx_sfcEuiD8jvvKsOdC6.ttf) format('truetype');
+		}
+		@font-face {
+		  font-family: 'Exo 2';
+		  font-style: normal;
+		  font-weight: 500;
+		  src: url(https://fonts.gstatic.com/s/exo2/v9/7cH1v4okm5zmbvwkAx_sfcEuiD8jjPKsOdC6.ttf) format('truetype');
+		}
+		@font-face {
+		  font-family: 'Exo 2';
+		  font-style: normal;
+		  font-weight: 700;
+		  src: url(https://fonts.gstatic.com/s/exo2/v9/7cH1v4okm5zmbvwkAx_sfcEuiD8jWfWsOdC6.ttf) format('truetype');
+		}
+		.zone {
+		  margin: -30vh auto 0 auto;
+		  position: relative;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+		  background: radial-gradient(ellipse at center, #EB6A5A 0, #c9402f 100%);
+		  width: 80%;
+		  height: max-content;
+		  border: 5px dashed white;
+		  text-align: center;
+		  color: white;
+		  z-index: 20;
+		  -webkit-transition: all 0.3s ease-out;
+		  transition: all 0.3s ease-out;
+		  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+		}
+		.zone .btnCompression .active {
+		  background: #EB6A5A;
+		  color: white;
+		}
+		.zone i {
+		  text-align: center;
+		  font-size: 10em;
+		  color: #fff;
+		  margin-top: 50px;
+		}
+		.zone .selectFile {
+		  height: 50px;
+		  margin: 20px auto;
+		  position: relative;
+		  width: 200px;
+		}
+		.zone label,
+		.zone input {
+		  cursor: pointer;
+		  display: block;
+		  height: 50px;
+		  left: 0;
+		  position: absolute;
+		  top: 0;
+		  width: 100%;
+		  border-radius: 5px;
+		}
+		.zone label {
+		  background: #fff;
+		  color: #EB6A5A;
+		  display: inline-block;
+		  font-size: 1.2em;
+		  line-height: 50px;
+		  padding: 0;
+		  text-align: center;
+		  white-space: nowrap;
+		  text-transform: uppercase;
+		  font-weight: 400;
+		  box-shadow: 0 1px 1px gray;
+		}
+		.zone input[type=file] {
+		  opacity: 0;
+		}
+		.zone.in {
+		  color: white;
+		  border-color: white;
+		  background: radial-gradient(ellipse at center, #EB6A5A 0, #c9402f 100%);
+		}
+		.zone.in i {
+		  color: #fff;
+		}
+		.zone.in label {
+		  background: #fff;
+		  color: #EB6A5A;
+		}
+		.zone.hover {
+		  color: gray;
+		  border-color: white;
+		  background: #fff;
+		  border: 5px dashed gray;
+		}
+		.zone.hover i {
+		  color: #EB6A5A;
+		}
+		.zone.hover label {
+		  background: #fff;
+		  color: #EB6A5A;
+		}
+		.zone.fade {
+		  -webkit-transition: all 0.3s ease-out;
+		  transition: all 0.3s ease-out;
+		  opacity: 1;
+		}
+		
+		#uploadBanner {
+			margin: -30vh auto 0 auto;
+		}
+		#songFileInputSubmit{
+			margin: 5vh 0 5vh 0
+		}
+		
+		#uploadFooter {
+			margin: 30vh auto 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+   <div class="site-wrap">
+
+    <div class="site-navbar mt-4">
+      <div class="container py-1">
+        <div class="row align-items-center">
+          <div class="col-8 col-md-8 col-lg-4">
+            <h1 class="mb-0">
+              <a href="index.html" class="text-white h2 mb-0">
+                <strong>TSMP3<span class="text-primary">.com</span></strong>
+              </a>
+            </h1>
+          </div>
+          <div class="col-4 col-md-4 col-lg-8">
+            <nav class="site-navigation text-right text-md-right" role="navigation">
+              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                  class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="has-children">
+                  <a href="#">Categories</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="artistcategory.html">Artists Category</a></li>
+                    <li><a href="category.html">Songs Category</a></li>
+					<li><a href="lyricspage.html">Lyrics Category</a></li>
+                  </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+				<li><a href="signup.html">SignUp</a></li>
+                <li><a href="about2.html">About Us</a></li>
+				<li><a href="Search.html">Search</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+  <div class="site-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 mx-auto text-center">
+          <div class="heading mb-3" id="uploadBanner">Upload</div>
+          <div class="w-75 mx-auto">
+            <!-- <p class="mb-5">Posted on Jun 24, 2020 <span class="mx-3">&bullet;</span> By Admin</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div id="faqCont" class="col-lg-12">
+			<div class="zone">
+			  <div id="dropZ">
+				<i class="fa fa-cloud-upload"></i>
+				<form>
+					<div id="songFile">Upload your audio file here...</div>                    
+					<span></span>
+					
+
+					<p>File format : mp3</p>
+				  </div>		
+				</form>
+				
+				
+			</div>
+			
+			 <style> 
+        h1 { 
+            color: green; 
+        } 
+          
+        body { 
+            text-align: center; 
+        } 
+    </style>
+								    <!-- File input field -->
+    <p>Upload your audio file</p> 
+    <input type="file" id="file"
+        onchange="return fileValidation()" /> 
+  
+    <!-- audio preview -->
+    <div id="audio"></div> 
+    <script> 
+        function fileValidation() { 
+            var fileInput =  
+                document.getElementById('file'); 
+              
+            var filePath = fileInput.value; 
+          
+            // Allowing file type 
+            var allowedExtensions =  
+                    /(\.mp3)$/i; 
+              
+            if (!allowedExtensions.exec(filePath)) { 
+                alert('Invalid file type'); 
+                fileInput.value = ''; 
+                return false; 
+            }  
+            else  
+            { 
+              
+                // Audio preview 
+                if (fileInput.files && fileInput.files[0]) { 
+                    var reader = new FileReader(); 
+                    reader.onload = function(e) { 
+                        document.getElementById( 
+                            'audio').innerHTML =  
+                            '<audio src="' + e.target.result 
+                            + '"/>'; 
+                    }; 
+                      
+                    reader.readAsDataURL(fileInput.files[0]); 
+                } 
+            } 
+        } 
+    </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+         
+          <p class="mb-5"> Most of the mp3 tracks listed on Top Sinhala Mp3 website are streamed through Adobe Flash Player. 
+							If you're having trouble playing these mp3 
+							tracks on Top Sinhala Mp3, we suggest you install the latest version of the Flash player from adobe.com.
+							It will deliver you best/desired results.</p>
+        </div>
+
+        <div id="followUs" class="col-lg-6">
+          <h3 class="footer-heading mb-4">Follow Us</h3>
+
+          <div class="mb-5">
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-soundcloud"></span></a>
+          </div>
+
+        </div>
+
+        <div class="col-md-12">
+          <h3 class="footer-heading mb-4">Navigations</h3>
+        </div>
+        <div class="col-md-12 col-lg-12 navCont">
+          <ul id="footerNav" class="list-unstyled">
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="dmcapolicy.html">DMCA</a></li>
+            <li><a href="termsofuse.html">Terms of Use</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="frequentlyaskedquestions.html">FAQ</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="contact.html">ContactUs</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12">
+          <p>
+            TSMP3 | Copyright &copy;<script data-cfasync="false"
+              src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
+              document.write(new Date().getFullYear());
+            </script> All rights reserved.
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" 
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+		crossorigin="anonymous"></script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/mediaelement-and-player.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/circleaudioplayer.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.js" 
+		integrity="sha512-0QMJSMYaer2wnpi+qbJOy4rOAlE6CbYImSlrgQuf2MBBMqTvK/k6ZJV126/EbdKzMAXaB6PHzdYxOX6Qey7WWw==" 
+		crossorigin="anonymous"></script>
+	<script>
+		$(document).on('change','#songFileInput' , function(){ 
+			//console.log("function");
+			//$('#songFileInput').val = 'Selected';
+			const val = $('input[type=file]').val();
+			$('#songFile').html(val.split('\\')[2]);
+			
+		});
+	
+		$(document).bind('dragover', function (e) {
+			var dropZone = $('.zone'),
+				timeout = window.dropZoneTimeout;
+			if (!timeout) {
+				dropZone.addClass('in');
+			} else {
+				clearTimeout(timeout);
+			}
+			var found = false,
+				node = e.target;
+			do {
+				if (node === dropZone[0]) {
+					found = true;
+					break;
+				}
+				node = node.parentNode;
+			} while (node != null);
+			if (found) {
+				dropZone.addClass('hover');
+			} else {
+				dropZone.removeClass('hover');
+			}
+			window.dropZoneTimeout = setTimeout(function () {
+				window.dropZoneTimeout = null;
+				dropZone.removeClass('in hover');
+			}, 100);
+		});
+	</script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

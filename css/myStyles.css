@@ -1,0 +1,189 @@
+#artistsCaption {
+	margin: 10vh 30vw 10vh 30vw;
+}
+
+#artistsCaptionHeading {
+	color: #e4ae50;
+}
+
+#footerNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin: 0 0 50px 0;
+}
+
+#footerNav li {
+	margin: 0 10px 0 0;
+}
+
+#feedbackform {
+	margin: -20vh 0 -20vh 0;
+}
+
+#feedbackformcontent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#fullname {
+	width: 800px;
+}
+
+#feedbackformcontent #fullname {
+	width: 800px;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin: auto;
+	border: none;
+	margin: 10px 0 10px 0;
+
+}
+
+#nameCont {
+	display: flex;
+	flex-direction: row;
+}
+
+#nameCont input:nth-child(n) {
+	margin: 0 10px 0 0;
+}
+
+#nameCont input:nth-child(2n) {
+	margin: 0 0 0 10px;
+}
+
+#faqCont {
+	margin: -30vh 0 0 0;
+}
+
+#termsofUseCont {
+	margin: -30vh 0 0 0;
+}
+
+#newLyricsForm {
+	min-width: 600px;
+}
+
+#addNewLyricsOptions {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0;
+}
+
+#addNewLyricsOptions input {
+	width: 150px;
+}
+
+#rapWindow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 600px;
+}
+
+.rapRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttonIcon {
+	border: none;
+	outline: none;
+	border-radius: 40px;
+	width: 40px;
+	height: 40px;
+	background-color: #e4ae50;
+	color: black;
+}
+
+.buttonIcon:focus {
+	border: none;
+	outline: none;
+}
+
+#faceUploads {
+	display: flex;
+	flex-direction: column;
+	flex-direction: column;
+}
+
+#faceLyrics {
+	display: flex;
+	flex-direction: column;
+	flex-direction: column-reverse;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .4s ease-in-out;
+}
+
+.slide.current {
+	opacity: 1;
+}
+
+.slide:first-child {
+	background: url('../images/show (1).jpg') no-repeat center center/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+.slide:nth-child(2) {
+	background: url('../images/show (2).jpg') no-repeat center top/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+.slide:nth-child(3) {
+	background: url('../images/show (3).jpg') no-repeat center top/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+.slide:nth-child(4) {
+	background: url('../images/show (4).jpg') no-repeat center top/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+.slide:nth-child(5) {
+	background: url('../images/show (5).jpg') no-repeat center top/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+.slide:nth-child(6) {
+	background: url('../images/show (6).jpg') no-repeat center top/cover;
+	background-color: #333333;
+	background-blend-mode: multiply;
+}
+
+@media screen and (max-width: 600px) {
+	#feedbackformcontent {
+		display: block;
+	}
+
+	#feedbackformcontent #fullname {
+		width: 550px;
+	}
+
+	#newLyricsForm {
+		min-width: 450px;
+	}
+
+	#addNewLyricsOptions {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+		width: max-content;
+	}
+}
